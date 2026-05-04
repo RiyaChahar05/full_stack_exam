@@ -17,8 +17,8 @@ const app = express();
 
 const MONGODB_URI = 'mongodb://localhost:27017/bookmanager';
 mongoose.connect(MONGODB_URI)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch(err => console.log('❌ MongoDB connection error:', err));
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('MongoDB connection error:', err));
 
 
 app.use(express.static('public'));
@@ -70,6 +70,6 @@ app.use((req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📝 Make sure MongoDB is running on ${MONGODB_URI}`);
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Make sure MongoDB is running on ${MONGODB_URI}`);
 });
